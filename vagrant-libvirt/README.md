@@ -22,6 +22,5 @@ vagrant plugin install vagrant-libvirt
 # Add Box
 - Browse https://app.vagrantup.com/boxes/search?provider=libvirt
 ```bash
-vagrant init generic/ubuntu1604
 vagrant up --provider=libvirt
 ```
