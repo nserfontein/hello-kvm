@@ -30,5 +30,28 @@ sudo modprobe kvm_intel
 - Open "Virtual Machine Manager"
 - File > Add > Connection > QEMU/KVM
 
+# Cleanup
+```bash
+virsh list --all
+
+VM_NAME=juju
+
+# get VMs storage files
+virsh dumpxml --domain $VM_NAME | grep 'source file'
+
+# graceful shutdown
+virsh shutdown --domain $VM_NAME
+
+# forceful shutdown
+virsh destroy --domain $VM_NAME
+
+# delete VM
+virsh undefine --domain $VM_NAME
+
+# remove storage file (see above)
+rm -rf /home/team/dev/vms/$VM_NAME.img
+```
+
 # Resources
 https://help.ubuntu.com/community/KVM/Installation
+https://www.cyberciti.biz/faq/howto-linux-delete-a-running-vm-guest-on-kvm/
