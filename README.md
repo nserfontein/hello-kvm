@@ -49,7 +49,7 @@ virsh destroy --domain $VM_NAME
 virsh undefine --domain $VM_NAME
 
 # remove storage file (see above)
-rm -rf /home/team/dev/vms/$VM_NAME.img
+rm -rf /mnt/rusty/vms/$VM_NAME.img
 ```
 
 # Resources
