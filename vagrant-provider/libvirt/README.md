@@ -24,3 +24,7 @@ vagrant plugin install vagrant-libvirt
 ```bash
 vagrant up --provider=libvirt
 ```
+
+# Resources
+https://github.com/hashicorp/vagrant/wiki/Available-Vagrant-Plugins
+https://github.com/vagrant-libvirt/vagrant-libvirt
